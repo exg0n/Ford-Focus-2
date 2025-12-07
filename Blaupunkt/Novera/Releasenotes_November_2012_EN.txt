@@ -1,0 +1,46 @@
+Release: November 2012
+
+The update to your Ford Bluetooth and multimedia module provides you with improvements in the following areas:
+
+- Improved energy management in connection with USB and Bluetooth devices
+
+
+Release: April 2012
+
+The update to your Ford Bluetooth and multimedia module provides you with improvements in the following areas:
+
+- Playback of music files via the USB stick
+- Connection stability of iPod/iPhone devices
+- Connection stability for Bluetooth, telephony and music streaming via Bluetooth
+- Compatibility of mobile phones
+
+
+
+Release: October 2011
+
+The update to your Ford Bluetooth and multimedia module provides you with improvements in the following areas:
+
+- Supports the original Apple USB cable
+- Apple iOS 5 compatibility: display of the phones battery level and signal strenght
+- Apple iOS 5 compatibility: improved stability for music streaming via Bluetooth
+- Playback of music files via the USB stick
+- Connection stability of iPod/iPhone devices
+- Connection stability for Bluetooth, telephony and music streaming via Bluetooth
+- Compatibility of mobile phones
+- Display of phone book and call lists
+
+
+
+This update is applicable to the following vehicles: 
+
+Model    Built date
+
+Fiesta:  July       2008 - December 2011
+Focus:   February   2008 - January 2012
+C-MAX:   February   2008 - January 2012
+Kuga:    February   2008 - January 2012
+Mondeo:  September  2008 - January 2012
+S-MAX:   September  2008 - January 2012
+Galaxy:  September  2008 - January 2012
+Transit: from June  2009
+Ranger:  from April 2009
