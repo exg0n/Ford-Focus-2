@@ -1,0 +1,61 @@
+# tmc.cnf
+#
+# (C) Robert Bosch GmbH
+
+
+begin: this-version
+5.0.2
+end
+
+
+begin: tima-conf
+
+# Where to look for a data medium:
+data_medium = /dev/cachedcdfs
+
+
+# Colon-separated search path for BDBs:
+bdb_path = $data_medium/data/rnw:.:/home/tima/bdb
+
+# BDB default name:
+bdb_file = d_01.dnl
+
+
+# Where to look for TMC config-data:
+data_spath = $data_medium/cfg/tima:.:../../services/tmcdata/data
+
+
+# tmcev's search path:
+tmcev_path = $data_spath
+
+# Base name of tmcev's configuration file:
+tmcev_conf = tmcev.cnf
+
+
+# tmcti's search path:
+tmcti_path = $data_spath
+
+# Base name of tmcti's configuration file:
+tmcti_conf = tmcti.cnf
+
+
+# ESKTS / EACPT search path:
+eskts_eacpt_path = $data_spath
+
+# Base name for ESKTS:
+eskts_conf = eskts.cnf
+
+# Base name for EACPT:
+eacpt_conf = eacpt.cnf
+
+
+# TMC test msg config search path:
+tst_msgs_path = $data_spath
+
+# Base name for TMC test msg config:
+tst_msgs_conf = tst_msg.cnf
+
+end
+
+
+# EOF -- ::make::

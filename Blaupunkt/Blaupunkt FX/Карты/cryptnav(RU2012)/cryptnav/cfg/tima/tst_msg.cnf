@@ -1,0 +1,58 @@
+# tst_msg.cnf
+#
+# (C) Robert Bosch GmbH
+
+
+
+
+begin: this-version
+0.0.0
+end
+
+
+
+
+begin: rdbid-act-lists
+
+
+# An RDB-ID actual list:
+  0D 01  63
+# CC LTN SID
+# -RDB-ID#1-
+
+
+# Another RDB-ID actual list:
+  0D 01  63   0F 20  62
+# CC LTN SID  CC LTN SID
+# -RDB-ID#1-  -RDB-ID#2-
+
+
+end
+
+
+
+
+begin: tst-msgs
+
+
+# A2 10 km stationary traffic between Braunschweig-Ost and Braunschweig-Nord
+  01  63  CD 46 0D 00  0A 10 6A 29 16 D3 82 00 4E 44 52 32 00 41 44 41 43 00
+# LTN SID -AID- CC ECC ------8A------ -PID- CR ---"NDR2\0"--- ---"ADAC\0"---
+
+
+# Visibility reduced in the area Strasbourg
+  20  00  CD 46 0F 00  08 05 2A 00 F3 00 00 00 00  00
+# LTN SID -AID- CC ECC ------8A------ -PID- CR PSN SPN
+
+
+# A7 2 km stationary traffic between Hildesheim and Hildesheimer Boerde
+  0A 08 67 30 2F
+# ------8A------
+
+
+end
+
+
+
+
+# EOF -- ::make::

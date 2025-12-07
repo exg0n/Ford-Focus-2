@@ -1,0 +1,8 @@
+Product Name:         Eastern Europe SD Sat Nav (V2)
+
+Worm:                 sd2-Ford_LSRNS_C_EEU v1
+
+Bosch Part Number:    7 612 105 592
+
+Ford Part Number:     8S7T-19H449-DBC
+

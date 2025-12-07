@@ -1,0 +1,814 @@
+# tmcti.cnf
+#
+# (C) Robert Bosch GmbH
+#
+#
+# Coding: utf-8 ("ölige Äpfel - oily apples")
+
+
+
+
+begin: this-version
+9.1.0
+end
+
+
+
+
+begin: traffic-info
+
+# Available languages:
+languages = cs_CZ da_DK de_DE en_GB en_US es_ES fr_FR hu_HU \
+            it_IT nl_NL no_NO pl_PL pt_PT sv_SE tr_TR
+
+# Default language (used, if no language is specified):
+dflt_lang = en_GB
+
+end
+
+
+
+
+begin: display-skel-cs_CZ
+
+<tinfo cc="\cc" rdbno="\rdbno">
+
+  \pr_roadnr
+  \pr_tailarea
+  \pr_areafill{\m_in{0}{<fillin>smerem\sp</fillin>}}
+  \pr_bidir_area{\m_in{1}{<fillin>\sp v obou smerech</fillin>}}
+  \pr_atarea
+  \m_in{0}{}
+  \m_in{1}{}
+  \pr_bidirect{\m_in{1}{<fillin>\sp v obou smerech</fillin>}}
+  \pr_roadname
+  \m_in{1}{}
+
+  \pr_segnode_fr
+
+  \pr_segfill{\m_in{0}{<fillin>smerem\sp</fillin>}}
+  \pr_bidirect{\m_in{1}{<fillin>\sp v obou smerech</fillin>}}
+  \pr_segnode_to
+  \m_in{0}{}
+  \m_in{1}{}
+
+
+  \pr_locfill{\m_in{0}{<fillin>mezi\sp</fillin>}}
+  \pr_loctail
+  \m_in{0}{}
+
+  \pr_imbereich{\m_in{0}{<fillin>V oblasti\sp</fillin>}}
+  \pr_locfill{\m_in{0}{<fillin>a\sp</fillin>}}
+  \pr_locat
+  \m_in{0}{}
+
+  \pr_event
+
+  \pr_speedlimit{\m_in{0}{<fillin>nejvyšší rychlost:\sp</fillin>}}
+  \pr_speed
+  \m_in{0}{}
+  
+</tinfo>
+
+end
+
+
+begin: display-skel-da_DK
+
+<tinfo cc="\cc" rdbno="\rdbno">
+
+  \m_in{0}{<fillin>Rute\sp</fillin>}
+  \pr_roadnr
+  \m_in{0}{}
+  \pr_areafill{\m_in{0}{<fillin>fra\sp</fillin>}}
+  \pr_tailarea
+  \m_in{0}{}
+  \pr_areafill{\m_in{0}{<fillin>til\sp</fillin>}}
+  \pr_bidir_area{\m_in{1}{<fillin>\sp i begge retninger</fillin>}}
+  \pr_atarea
+  \m_in{0}{}
+  \m_in{1}{}
+  \pr_bidirect{\m_in{1}{<fillin>\sp i begge retninger</fillin>}}
+  \pr_roadname
+  \m_in{1}{}
+
+
+  \pr_segfill{\m_in{0}{<fillin>fra\sp</fillin>}}
+  \pr_segnode_fr
+  \m_in{0}{}
+
+  \pr_segfill{\m_in{0}{<fillin>til\sp</fillin>}}
+  \pr_bidirect{\m_in{1}{<fillin>\sp i begge retninger</fillin>}}
+  \pr_segnode_to
+  \m_in{0}{}
+  \m_in{1}{}
+
+  \pr_locfill{\m_in{0}{<fillin>mellem\sp</fillin>}}
+  \pr_loctail
+  \m_in{0}{}
+
+  \pr_imbereich{\m_in{0}{<fillin>I område\sp</fillin>}}
+  \pr_locfill{\m_in{0}{<fillin>og\sp</fillin>}}
+  \pr_locat
+  \m_in{0}{}
+
+  \pr_event
+
+  \pr_speedlimit{\m_in{0}{<fillin>maks. hastighed:\sp</fillin>}}
+  \pr_speed
+  \m_in{0}{}
+
+</tinfo>
+
+end
+
+
+begin: display-skel-de_DE
+
+<tinfo cc="\cc" rdbno="\rdbno">
+
+  \pr_roadnr
+  \pr_tailarea
+  \pr_areafill{\m_in{0}{<fillin>in Richtung\sp</fillin>}}
+  \pr_bidir_area{\m_in{1}{<fillin>\sp in beiden Richtungen</fillin>}}
+  \pr_atarea
+  \m_in{0}{}
+  \m_in{1}{}
+  \pr_bidirect{\m_in{1}{<fillin>\sp in beiden Richtungen</fillin>}}
+  \pr_roadname
+  \m_in{1}{}
+
+  \pr_segnode_fr
+
+  \pr_segfill{\m_in{0}{<fillin>in Richtung\sp</fillin>}}
+  \pr_bidirect{\m_in{1}{<fillin>\sp in beiden Richtungen</fillin>}}
+  \pr_segnode_to
+  \m_in{0}{}
+  \m_in{1}{}
+
+  \pr_locfill{\m_in{0}{<fillin>zwischen\sp</fillin>}}
+  \pr_loctail
+  \m_in{0}{}
+
+  \pr_imbereich{\m_in{0}{<fillin>Im Bereich\sp</fillin>}}
+  \pr_locfill{\m_in{0}{<fillin>und\sp</fillin>}}
+  \pr_locat
+  \m_in{0}{}
+
+  \pr_event
+
+  \pr_speedlimit{\m_in{0}{<fillin>Höchstgeschwindigkeit:\sp</fillin>}}
+  \pr_speed
+  \m_in{0}{}
+
+</tinfo>
+
+end
+
+
+begin: display-skel-en_GB
+
+<tinfo cc="\cc" rdbno="\rdbno">
+
+  \pr_roadnr
+  \pr_tailarea
+  \pr_bidir_area{\m_in{1}{<fillin>\sp in both directions</fillin>}}
+  \pr_atarea
+  \m_in{1}{}
+  \pr_bidirect{\m_in{1}{<fillin>\sp in both directions</fillin>}}
+  \pr_roadname
+  \m_in{1}{}
+
+  \pr_segnode_fr
+
+  \pr_bidirect{\m_in{1}{<fillin>\sp in both directions</fillin>}}
+  \pr_segnode_to
+  \m_in{1}{}
+
+  \pr_event
+
+  \pr_speedlimit{\m_in{0}{<fillin>speed limit:\sp</fillin>}}
+  \pr_speed
+  \m_in{0}{}
+
+  \pr_locfill{\m_in{0}{<fillin>between\sp</fillin>}}
+  \pr_loctail
+  \m_in{0}{}
+
+  \pr_imbereich{\m_in{0}{<fillin>in the area\sp</fillin>}}
+  \pr_locfill{\m_in{0}{<fillin>and\sp</fillin>}}
+  \pr_locat
+  \m_in{0}{}
+
+</tinfo>
+
+end
+
+
+begin: display-skel-en_US
+
+<tinfo cc="\cc" rdbno="\rdbno">
+
+  \pr_roadnr
+  \pr_tailarea
+  \pr_bidir_area{\m_in{1}{<fillin>\sp in both directions</fillin>}}
+  \pr_atarea
+  \m_in{1}{}
+  \pr_bidirect{\m_in{1}{<fillin>\sp in both directions</fillin>}}
+  \pr_roadname
+  \m_in{1}{}
+
+  \pr_segnode_fr
+
+  \pr_bidirect{\m_in{1}{<fillin>\sp in both directions</fillin>}}
+  \pr_segnode_to
+  \m_in{1}{}
+
+  \pr_event
+
+  \pr_speedlimit{\m_in{0}{<fillin>speed limit:\sp</fillin>}}
+  \pr_speed
+  \m_in{0}{}
+
+  \pr_locfill{\m_in{0}{<fillin>between\sp</fillin>}}
+  \pr_loctail
+  \m_in{0}{}
+
+  \pr_imbereich{\m_in{0}{<fillin>in the area\sp</fillin>}}
+  \pr_locfill{\m_in{0}{<fillin>and\sp</fillin>}}
+  \pr_locat
+  \m_in{0}{}
+
+</tinfo>
+
+end
+
+
+begin: display-skel-es_ES
+
+<tinfo cc="\cc" rdbno="\rdbno">
+
+  \pr_roadnr
+  \pr_areafill{\m_in{0}{<fillin>sentido\sp</fillin>}}
+  \pr_tailarea
+  \m_in{0}{}
+  \pr_bidir_area{\m_in{1}{<fillin>\sp bidireccional</fillin>}}
+  \pr_atarea
+  \m_in{1}{}
+  \pr_bidirect{\m_in{1}{<fillin>\sp bidireccional</fillin>}}
+  \pr_roadname
+  \m_in{1}{}
+
+  \pr_segfill{\m_in{0}{<fillin>sentido\sp</fillin>}}
+  \pr_segnode_fr
+  \m_in{0}{}
+
+  \pr_bidirect{\m_in{1}{<fillin>\sp bidireccional</fillin>}}
+  \pr_segnode_to
+  \m_in{1}{}
+
+  \pr_event
+
+  \pr_speedlimit{\m_in{0}{<fillin>velocidad máxima:\sp</fillin>}}
+  \pr_speed
+  \m_in{0}{}
+
+  \pr_locfill{\m_in{0}{<fillin>entre\sp</fillin>}}
+  \pr_loctail
+  \m_in{0}{}
+
+  \pr_imbereich{\m_in{0}{<fillin>en el área\sp</fillin>}}
+  \pr_locfill{\m_in{0}{<fillin>y\sp</fillin>}}
+  \pr_locat
+  \m_in{0}{}
+
+</tinfo>
+
+end
+
+
+begin: display-skel-fr_FR
+
+<tinfo cc="\cc" rdbno="\rdbno">
+
+  \pr_roadnr
+  \pr_tailarea
+  \pr_bidir_area{\m_in{1}{<fillin>\sp dans les deux sens</fillin>}}
+  \pr_atarea
+  \m_in{1}{}
+  \pr_bidirect{\m_in{1}{<fillin>\sp dans les deux sens</fillin>}}
+  \pr_roadname
+  \m_in{1}{}
+
+  \pr_segnode_fr
+
+  \pr_bidirect{\m_in{1}{<fillin>\sp dans les deux sens</fillin>}}
+  \pr_segnode_to
+  \m_in{1}{}
+
+  \pr_event
+
+  \pr_speedlimit{\m_in{0}{<fillin>vitesse limite:\sp</fillin>}}
+  \pr_speed
+  \m_in{0}{}
+
+  \pr_locfill{\m_in{0}{<fillin>entre\sp</fillin>}}
+  \pr_loctail
+  \m_in{0}{}
+
+  \pr_imbereich{\m_in{0}{<fillin>dans la région\sp</fillin>}}
+  \pr_locfill{\m_in{0}{<fillin>et\sp</fillin>}}
+  \pr_locat
+  \m_in{0}{}
+
+</tinfo>
+
+end
+
+
+begin: display-skel-hu_HU
+
+<tinfo cc="\cc" rdbno="\rdbno">
+
+  \pr_roadnr
+  \pr_tailarea
+  \pr_areafill{\m_in{1}{<fillin>\sp irányában</fillin>}}
+  \pr_bidir_area{\m_in{1}{<fillin>\sp mindkét irányban</fillin>}}
+  \pr_atarea
+  \m_in{1}{}
+  \pr_bidirect{\m_in{1}{<fillin>\sp mindkét irányban</fillin>}}
+  \pr_roadname
+  \m_in{1}{}
+
+  \m_in{0}{}
+  \pr_segnode_fr
+  \m_in{0}{}
+
+  \pr_segfill{\m_in{1}{<fillin>\sp irányában</fillin>}}
+  \pr_bidirect{\m_in{1}{<fillin>\sp mindkét irányában</fillin>}}
+  \pr_segnode_to
+  \m_in{1}{}
+
+  \pr_loctail
+
+  \pr_imbereich{\m_in{1}{<fillin>\sp térségében</fillin>}}
+  \pr_locfill{\m_in{0}{<fillin>és\sp</fillin>}}
+  \pr_locfill{\m_in{1}{<fillin>között\sp</fillin>}}
+  \pr_locat
+  \m_in{0}{}
+  \m_in{1}{}
+
+  \pr_event
+
+  \pr_speedlimit{\m_in{0}{<fillin>megengedett sebesség\sp</fillin>}}
+  \pr_speed
+  \m_in{0}{}
+
+</tinfo>
+
+end
+
+
+begin: display-skel-it_IT
+
+<tinfo cc="\cc" rdbno="\rdbno">
+
+  \pr_roadnr
+  \pr_tailarea
+  \pr_bidir_area{\m_in{1}{<fillin>\sp nei due sensi</fillin>}}
+  \pr_atarea
+  \m_in{1}{}
+  \pr_bidirect{\m_in{1}{<fillin>\sp nei due sensi</fillin>}}
+  \pr_roadname
+  \m_in{1}{}
+
+  \pr_segnode_fr
+  \pr_bidirect{\m_in{1}{<fillin>\sp nei due sensi</fillin>}}
+  \pr_segnode_to
+  \m_in{1}{}
+
+  \pr_segfill{\m_in{0}{<fillin>direzione\sp</fillin>}}
+  \pr_s_segnode_to
+  \m_in{0}{}
+
+  \pr_event
+
+  \pr_speedlimit{\m_in{0}{<fillin>velocità massima:\sp</fillin>}}
+  \pr_speed
+  \m_in{0}{}
+
+  \pr_locfill{\m_in{0}{<fillin>tra\sp</fillin>}}
+  \pr_loctail
+  \m_in{0}{}
+
+  \pr_imbereich{\m_in{0}{<fillin>nella zona\sp</fillin>}}
+  \pr_locfill{\m_in{0}{<fillin>e\sp</fillin>}}
+  \pr_locat
+  \m_in{0}{}
+
+</tinfo>
+
+end
+
+
+begin: display-skel-nl_NL
+
+<tinfo cc="\cc" rdbno="\rdbno">
+
+  \pr_roadnr
+  \pr_tailarea
+  \pr_bidir_area{\m_in{1}{<fillin>\sp in beide richtingen</fillin>}}
+  \pr_atarea
+  \m_in{1}{}
+  \pr_bidirect{\m_in{1}{<fillin>\sp in beide richtingen</fillin>}}
+  \pr_roadname
+  \m_in{1}{}
+
+  \pr_segnode_fr
+
+  \pr_bidirect{\m_in{1}{<fillin>\sp in beide richtingen</fillin>}}
+  \pr_segnode_to
+  \m_in{1}{}
+
+  \pr_locfill{\m_in{0}{<fillin>tussen\sp</fillin>}}
+  \pr_loctail
+  \m_in{0}{}
+
+  \pr_imbereich{\m_in{0}{<fillin>In het gebied van\sp</fillin>}}
+  \pr_locfill{\m_in{0}{<fillin>en\sp</fillin>}}
+  \pr_locat
+  \m_in{0}{}
+
+  \pr_event
+
+  \pr_speedlimit{\m_in{0}{<fillin>maximale snelheid:\sp</fillin>}}
+  \pr_speed
+  \m_in{0}{}
+
+</tinfo>
+
+end
+
+
+begin: display-skel-no_NO
+
+<tinfo cc="\cc" rdbno="\rdbno">
+
+  \pr_roadnr
+  \pr_tailarea
+  \pr_areafill{\m_in{0}{<fillin>retning\sp</fillin>}}
+  \pr_bidir_area{\m_in{1}{<fillin>\sp i begge retninger</fillin>}}
+  \pr_atarea
+  \m_in{0}{}
+  \m_in{1}{}
+  \pr_bidirect{\m_in{1}{<fillin>\sp i begge retninger</fillin>}}
+  \pr_roadname
+  \m_in{1}{}
+
+  \pr_segnode_fr
+
+  \pr_segfill{\m_in{0}{<fillin>retning\sp</fillin>}}
+  \pr_bidirect{\m_in{1}{<fillin>\sp i begge retninger</fillin>}}
+  \pr_segnode_to
+  \m_in{0}{}
+  \m_in{1}{}
+
+  \pr_locfill{\m_in{0}{<fillin>mellom\sp</fillin>}}
+  \pr_loctail
+  \m_in{0}{}
+
+  \pr_imbereich{\m_in{0}{<fillin>I området\sp</fillin>}}
+  \pr_locfill{\m_in{0}{<fillin>og\sp</fillin>}}
+  \pr_locat
+  \m_in{0}{}
+
+  \pr_event
+
+  \pr_speedlimit{\m_in{0}{<fillin>max. hastighet:\sp</fillin>}}
+  \pr_speed
+  \m_in{0}{}
+
+</tinfo>
+
+end
+
+
+begin: display-skel-pl_PL
+
+<tinfo cc="\cc" rdbno="\rdbno">
+
+  \pr_roadnr
+  \pr_tailarea
+  \pr_areafill{\m_in{0}{<fillin>w kierunku\sp</fillin>}}
+  \pr_bidir_area{\m_in{1}{<fillin>\sp w obydwu kierunkach</fillin>}}
+  \pr_atarea
+  \m_in{0}{}
+  \m_in{1}{}
+  \pr_bidirect{\m_in{1}{<fillin>\sp w obydwu kierunkach</fillin>}}
+  \pr_roadname
+  \m_in{1}{}
+
+  \pr_segnode_fr
+
+  \pr_segfill{\m_in{0}{<fillin>w kierunku\sp</fillin>}}
+  \pr_bidirect{\m_in{1}{<fillin>\sp w obydwu kierunkach</fillin>}}
+  \pr_segnode_to
+  \m_in{0}{}
+  \m_in{1}{}
+
+  \pr_event
+
+  \pr_speedlimit{\m_in{0}{<fillin>ogranicz. predk.:\sp</fillin>}}
+  \pr_speed
+  \m_in{0}{}
+
+  \pr_locfill{\m_in{0}{<fillin>miedzy\sp</fillin>}}
+  \pr_loctail
+  \m_in{0}{}
+
+  \pr_imbereich{\m_in{0}{<fillin>na terenie\sp</fillin>}}
+  \pr_locfill{\m_in{0}{<fillin>i\sp</fillin>}}
+  \pr_locat
+  \m_in{0}{}
+
+</tinfo>
+
+end
+
+
+begin: display-skel-pt_PT
+
+<tinfo cc="\cc" rdbno="\rdbno">
+
+  \pr_roadnr
+  \pr_areafill{\m_in{0}{<fillin>sentido\sp</fillin>}}
+  \pr_tailarea
+  \m_in{0}{}
+  \pr_bidir_area{\m_in{1}{<fillin>\sp em ambas as direcções</fillin>}}
+  \pr_atarea
+  \m_in{1}{}
+  \pr_bidirect{\m_in{1}{<fillin>\sp em ambas as direcções</fillin>}}
+  \pr_roadname
+  \m_in{1}{}
+
+  \pr_segfill{\m_in{0}{<fillin>sentido\sp</fillin>}}
+  \pr_segnode_fr
+  \m_in{0}{}
+  
+  \pr_bidirect{\m_in{1}{<fillin>\sp em ambas as direcções</fillin>}}
+  \pr_segnode_to
+  \m_in{1}{}
+
+  \pr_event
+
+  \pr_speedlimit{\m_in{0}{<fillin>velocidade máxima:\sp</fillin>}}
+  \pr_speed
+  \m_in{0}{}
+
+  \pr_locfill{\m_in{0}{<fillin>entre\sp</fillin>}}
+  \pr_loctail
+  \m_in{0}{}
+
+  \pr_imbereich{\m_in{0}{<fillin>na zona de\sp</fillin>}}
+  \pr_locfill{\m_in{0}{<fillin>e\sp</fillin>}}
+  \pr_locat
+  \m_in{0}{}
+
+</tinfo>
+
+end
+
+
+begin: display-skel-sv_SE
+
+<tinfo cc="\cc" rdbno="\rdbno">
+
+  \pr_roadnr
+  \pr_tailarea
+  \pr_areafill{\m_in{0}{<fillin>riktning\sp</fillin>}}
+  \pr_bidir_area{\m_in{1}{<fillin>\sp i båda riktningarna</fillin>}}
+  \pr_atarea
+  \m_in{0}{}
+  \m_in{1}{}
+  \pr_bidirect{\m_in{1}{<fillin>\sp i båda riktningarna</fillin>}}
+  \pr_roadname
+  \m_in{1}{}
+
+  \pr_segnode_fr
+
+  \pr_segfill{\m_in{0}{<fillin>riktning\sp</fillin>}}
+  \pr_bidirect{\m_in{1}{<fillin>\sp i båda riktningarna</fillin>}}
+  \pr_segnode_to
+  \m_in{0}{}
+  \m_in{1}{}
+
+  \pr_locfill{\m_in{0}{<fillin>mellan\sp</fillin>}}
+  \pr_loctail
+  \m_in{0}{}
+
+  \pr_imbereich{\m_in{0}{<fillin>I område\sp</fillin>}}
+  \pr_locfill{\m_in{0}{<fillin>och\sp</fillin>}}
+  \pr_bidirect{\m_in{1}{<fillin>:</fillin>}}
+  \pr_locat
+  \m_in{0}{}
+  \m_in{1}{}
+
+  \pr_event
+
+  \pr_speedlimit{\m_in{0}{<fillin>max. hastighet:\sp</fillin>}}
+  \pr_speed
+  \m_in{0}{}
+
+</tinfo>
+
+end
+
+
+begin: display-skel-tr_TR
+
+<tinfo cc="\cc" rdbno="\rdbno">
+
+  \pr_roadnr
+  \pr_tailarea
+  \pr_bidir_area{\m_in{1}{<fillin>\sp iki yönde</fillin>}}
+  \pr_atarea
+  \m_in{1}{}
+  \pr_bidirect{\m_in{1}{<fillin>\sp iki yönde</fillin>}}
+  \pr_roadname
+  \m_in{1}{}
+
+   \pr_segnode_fr
+
+  \pr_segfill{\m_in{1}{<fillin>\sp yolu,</fillin>}}
+  \pr_bidirect{\m_in{1}{<fillin>\sp iki yönde</fillin>}}
+  \pr_segnode_to
+  \m_in{1}{}
+
+  \pr_segfill{\m_in{1}{<fillin>\sp yönünde</fillin>}}
+  \pr_s_segnode_to
+  \m_in{1}{}
+
+  \pr_loctail
+
+  \pr_imbereich{\m_in{1}{<fillin>\sp bölgesinde</fillin>}}
+  \pr_locfill{\m_in{0}{<fillin>ile\sp</fillin>}}
+  \pr_locfill{\m_in{1}{<fillin>\sp arasi</fillin>}}
+  \pr_locat
+  \m_in{0}{}
+  \m_in{1}{}
+
+  \pr_event
+
+  \pr_speedlimit{\m_in{0}{<fillin>azami sürat\sp</fillin>}\m_in{1}{<fillin>\sp dir</fillin>}}
+  \pr_speed
+  \m_in{0}{}
+
+</tinfo>
+
+end
+
+
+# The default must be the last display-skel section:
+
+begin: display-skel-dflt
+
+<tinfo cc="\cc" rdbno="\rdbno">
+
+  \pr_roadnr
+  \pr_tailarea
+  \pr_bidir_area{\m_in{1}{<fillin>\sp in both directions</fillin>}}
+  \pr_atarea
+  \m_in{1}{}
+  \pr_bidirect{\m_in{1}{<fillin>\sp in both directions</fillin>}}
+  \pr_roadname
+  \m_in{1}{}
+
+  \pr_segnode_fr
+
+  \pr_bidirect{\m_in{1}{<fillin>\sp in both directions</fillin>}}
+  \pr_segnode_to
+  \m_in{1}{}
+
+  \pr_event
+
+  \pr_speedlimit{\m_in{0}{<fillin>speed limit:\sp</fillin>}}
+  \pr_speed
+  \m_in{0}{}
+
+  \pr_locfill{\m_in{0}{<fillin>between\sp</fillin>}}
+  \pr_loctail
+  \m_in{0}{}
+
+  \pr_imbereich{\m_in{0}{<fillin>in the area\sp</fillin>}}
+  \pr_locfill{\m_in{0}{<fillin>and\sp</fillin>}}
+  \pr_locat
+  \m_in{0}{}
+
+</tinfo>
+
+end
+
+
+
+
+# Information item definition (use of XML markup):
+
+
+begin: t_road
+
+<road class="\road_typ">
+  \m_recall{0}<type>\road_cl</type>
+  <num>\road_num</num>
+  <sfx>\road_sfx</sfx>
+</road>
+
+end
+
+
+begin: t_roadname
+
+<road class="\road_typ">
+  <name>\text</name>\m_recall{1}
+</road>
+
+end
+
+
+begin: t_seg
+
+<seg pos="\node{from}{to}">
+  \m_recall{0}\text\m_recall{1}
+</seg>
+
+end
+
+
+begin: t_area
+<area pos="\node{from}{to}">
+  \m_recall{0}
+  \text
+  \m_recall{1}
+</area>
+end
+
+
+begin: t_point
+
+<point pos="\node{tail}{at}">
+  \m_recall{0}\sksub
+  \text
+  \m_recall{1}
+</point>
+
+end
+
+
+begin: t_sub
+<type val="\stval">\stype\sp</type>
+end
+
+
+begin: t_event
+
+<event nev="\nev">
+  \evt_text
+</event>
+
+end
+
+
+begin: t_speed
+
+<speedlimit>
+  \m_recall{0}
+  <sp_quant>\speedquant\sp</sp_quant>
+  <sp_qual type="\uspeedqual">\speedqual</sp_qual>
+  \m_recall{1}
+</speedlimit>
+
+end
+
+
+begin: t_equant
+<quant>\quant\sp</quant>
+end
+
+
+begin: t_equal
+<qual type="\uqual">\qual</qual>
+end
+
+
+begin: t_str_text
+
+<pref>\str_pref</pref><spref>\str_spref</spref>
+<body>\str_body</body><sbody>\str_sbody</sbody>
+<suf>\str_suf</suf><ssuf>\str_ssuf</ssuf>
+
+end
+
+
+
+
+
+# EOF -- ::make::
